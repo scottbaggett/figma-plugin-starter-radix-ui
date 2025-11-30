@@ -1,15 +1,15 @@
 # Figma Plugin Scaffold
 
-A modern Figma plugin development scaffold built with Vite, React, Tailwind CSS v4, and shadcn/ui.
+A modern Figma plugin development scaffold built with Vite, React and Radiux UI for themes and components.
 
 ## Tech Stack
 
 - **Vite** - Fast build tool with HMR
 - **React 19** - UI framework
 - **TypeScript** - Type safety
-- **Tailwind CSS v4** - Utility-first CSS with native CSS variables
-- **shadcn/ui** - Accessible, customizable component library
+- **Radix UI** - Components, colors and design tokens
 - **vite-plugin-singlefile** - Bundles UI into a single HTML file (required by Figma)
+- **Biome** - Fast formatting and linting
 
 ## Project Structure
 
@@ -24,15 +24,12 @@ figma-scaffold/
     ├── plugin/
     │   └── code.ts         # Figma sandbox code (no DOM access)
     ├── ui/
+    │   ├── components/     # Custom Components
     │   ├── index.html      # UI entry point
     │   ├── main.tsx        # React entry
     │   ├── App.tsx         # Main app component
-    │   └── index.css       # Tailwind styles + CSS variables
-    ├── components/
-    │   └── ui/             # shadcn/ui components
-    ├── lib/
-    │   └── utils.ts        # cn() utility
-    └── hooks/              # Custom React hooks
+    │   └── index.css       # Styles
+    ├── components/         # Custom Components
 ```
 
 ## Getting Started
@@ -71,7 +68,7 @@ pnpm build
 | `pnpm build:plugin` | Build plugin code only |
 | `pnpm build:ui` | Build UI only |
 | `pnpm typecheck` | Run TypeScript type checking |
-| `pnpm lint` | Run ESLint |
+| `pnpm format` | Run Biome |
 
 ### Development Workflow
 
